@@ -16,6 +16,5 @@ fun containsDuplicate(nums: IntArray): Boolean {
             hashMap[i]= true
         }
     }
-
    return false
 }
