@@ -12,7 +12,23 @@ fun kMostFrequentElements(nums: IntArray, k: Int): IntArray {
         mutableListOf()
     }
 
-    println(freq)
+    for(num in nums){
+        count[num] = count.getOrDefault(num, 0) + 1
+    }
+
+    for((k,v) in count){
+        freq[v].add(k)
+    }
+
+    for(i in freq.size downTo 0){
+        for(el in freq[i]){
+            if (res.size>= k){
+                return res.toIntArray()
+            } else {
+                res.add(el)
+            }
+        }
+    }
 
     return intArrayOf()
 }
