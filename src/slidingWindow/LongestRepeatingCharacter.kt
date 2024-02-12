@@ -1,20 +1,25 @@
 import java.util.Collections.max
 
 /**
+ * 424. Longest Repeating Character Replacement
+
+ * You are given a string s and an integer k. You can choose any character of the string and change it to
+ * any other uppercase English character. You can perform this operation at most k times.
  *
+ * Return the length of the longest substring containing the same letter you can get after performing the above operations.
  */
 
 fun main() {
+    //test expect 4
     val test  = "ABAB"
     val k = 2
 
     println(characterReplacement(test, k))
 
-
+    // test2 expect 4
     val test2  = "AABABBA"
     val k2 = 1
-
-    println(characterReplacement(test, k))
+    println(characterReplacement(test2, k2))
 
 }
 
